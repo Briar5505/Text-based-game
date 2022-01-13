@@ -1,0 +1,131 @@
+import time
+import pygame, pys
+from pygame.locals import *
+
+
+def printtext(sentence):
+    for char in sentence:
+        print(char, end='', flush=True)
+        time.sleep(0)
+    print()
+
+
+def player_stats():
+    chosen_class()
+    class_skills()
+    class_weapon()
+    class_armor()
+    healing_potion()
+
+
+#Character Skills
+thief_skills = ["Pocket Sand", "Steal", "Stab", "Flurry", "Dodge"]
+
+knight_skills = [
+    "Overhead Slash", "Toughen", "Slash", "Sweep", "Shield Block"
+]
+
+mage_skills = [
+    "Fireball", "Light Flare", "Aether Stream", "Weaken", "Staff Block"
+]
+
+berserker_skills = ["Cleave", "Rage", "Flurry", "Fury", "Dual Block"]
+
+assassin_skills = [
+    "Backstab", "Neck Slash", "Vital Slash", "Soot Throw", "Sword Block"
+]
+
+templar_skills = [
+    "Divine Intervention", "Divine Armor", "Sword Strike", "Pommel Bash",
+    "Shield Block"
+]
+
+class_skills = thief_skills, knight_skills, mage_skills, berserker_skills, assassin_skills, templar_skills
+
+character_class = [
+    "Thief", "knight", "Mage", "Berserker", "Assassin", "Templar"
+]
+
+#Character Weapons
+thief_weapon = ["Dual Messer"]
+
+knight_weapon = ["Gladius"]
+
+mage_weapon = ["Staff"]
+
+berserker_weapon = ["Twin Flamberge"]
+
+assassin_weapon = ["Dual Falchion"]
+
+templar_weapon = ["Curtana"]
+
+#Character Armor
+thief_armor = ["Shadowed Leather Armor"]
+
+knight_armor = ["Steel And Chainmail Armor"]
+
+mage_armor = ["Mage Robes"]
+
+berserker_armor = ["Superheated Cobalt Armor"]
+
+assassin_armor = ["Treated Laether Armor"]
+
+templar_armor = ["Divine Steel Armor"]
+
+#Healing Potions
+healing_potion = ["Healing Potion"]
+
+#Skills Defined To Characters
+Thief = [thief_skills, thief_weapon, thief_armor, healing_potion]
+
+Knight = [knight_skills, knight_weapon, knight_armor, healing_potion]
+
+Mage = [mage_skills, mage_weapon, mage_armor, healing_potion]
+
+Berserker = [
+    berserker_skills, berserker_weapon, berserker_armor, healing_potion
+]
+
+Assassin = [assassin_skills, assassin_weapon, assassin_armor, healing_potion]
+
+Templar = [templar_skills, templar_weapon, templar_armor, healing_potion]
+
+#Weapons Defined Into Group
+class_weapon = [thief_weapon, knight_weapon, mage_weapon, berserker_weapon, assassin_weapon, templar_weapon]
+
+#Armor Defined Into Group
+class_armor = [thief_armor, knight_armor, mage_armor, berserker_armor, assassin_armor, templar_armor]
+
+class_select = True
+while class_select:
+    chosen_class = input(
+        "What class do you choose? Thief, Knight, Mage, Berserker,  Assassin, Templar >>"
+    )
+    if chosen_class == ("Thief"):
+        print(thief_skills)
+        class_selct = False
+        break
+    if chosen_class == ("Knight"):
+        print(knight_skills)
+        class_selct = False
+        break
+    if chosen_class == ("Mage"):
+        print(mage_skills)
+        class_selct = False
+        break
+    if chosen_class == ("Berserker"):
+        print(berserker_skills)
+        class_selct = False
+        break
+    if chosen_class == ("Assassin"):
+        print(assassin_skills)
+        class_selct = False
+        break
+    if chosen_class == ("Templar"):
+        print(templar_skills)
+        class_selct = False
+        break
+    else:
+        print("That is not one of the available classes.")
+
+print(player_stats)
